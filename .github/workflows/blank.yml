@@ -6,12 +6,12 @@ on:
 
 jobs:
 steps:
-rcall:
-  uses: jilu07/action-test/.github/workflows/actions.yml@main
-  with:
-    config-path: .github/actions.yml
-  secrets:
-    envPAT: ${{ secrets.envTPAT }}
+  - name: recall
+    uses: jilu07/action-test/.github/workflows/actions.yml@main
+    with:
+      config-path: .github/actions.yml
+    secrets:
+      envPAT: ${{ secrets.envTPAT }}
 
   
         
