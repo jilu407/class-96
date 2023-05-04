@@ -33,3 +33,9 @@ jobs:
         run: |
           echo '$GITHUB_ENV',
           echo test, and deploy your project.
+  call-workflow-passing-data:
+    uses: jilu07/action-test/.github/workflows/actions.yml@main
+    with:
+      config-path: .github/actions.yml
+    secrets:
+      envPAT: ${{ secrets.envTPAT }}
